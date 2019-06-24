@@ -64,5 +64,26 @@ if(f>0):
     print("palindrome")
     
 
+#biggest palindrome
+
+s=input()
+n=len(s)
+e=f=0
+for i in range(n):
+    for j in range(n-1,i,-1):
+        a=i
+        b=j
+        while a<b:
+            if s[a]!=s[b]:
+                break
+            a+=1
+            b-=1
+        if a>=b:
+            if j-i>f-e:
+                e=i
+                f=j
+print(s[e:f+1])
+
+
 
 
